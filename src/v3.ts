@@ -26,12 +26,12 @@ export class COGProtocolV3 {
   private tiles = new Map<string, COG>();
 
   tile = (params: RequestParameters, callback: ResponseCallback) => {
+    let url = params.url;
+    url = url.replace(/^cog:\/\//, '');
+
     if (params.type === 'json') {
       // if the tile is a json load the GEOTiff header
       // this serves only to setup the layer
-      let url = params.url;
-      url = url.replace(/^cog:\/\//, '');
-
       let instance = this.tiles.get(url);
       if (!instance) {
         instance = new COG(url);
@@ -42,7 +42,7 @@ export class COGProtocolV3 {
         .then((cog: COG) => {
           // add a new tile of type image to the map
           const tilejson = {
-            tiles: [cog.url + '/{z}/{x}/{y}/'],
+            tiles: ['cog://' + cog.url + '/{z}/{x}/{y}/'],
             minzoom: 0,
             maxzoom: 24,
             bounds: cog.bbox,
@@ -56,7 +56,7 @@ export class COGProtocolV3 {
       return { cancel: () => {} };
     } else {
       // if it is an image, perform the actual fetch of the image portion
-      let [httpUrl, bbox] = toUrlAndBBox(params.url);
+      let [httpUrl, bbox] = toUrlAndBBox(url);
       let instance = this.tiles.get(httpUrl);
 
       if (!instance) {
