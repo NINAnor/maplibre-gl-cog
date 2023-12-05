@@ -1,0 +1,9 @@
+services:
+  nginx:
+    ports:
+    - 8000:80
+
+    image: nginx
+    volumes:
+      - ./:/var/www/
+      - ./default.conf.template:/etc/nginx/templates/default.conf.template:ro

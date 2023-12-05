@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add a default marker</title>
+    <meta property="og:description" content="COG example" />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    <script src='index.js'></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<script>
+    const protocol = new maplibreglCOG.ProtocolV3();
+    maplibregl.addProtocol('cog', protocol.tile);
+
+    const map = new maplibregl.Map({
+        container: 'map',
+        style: 'style.json'
+    });
+</script>
+</body>
+</html>

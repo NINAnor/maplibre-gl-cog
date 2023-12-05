@@ -1,0 +1,41 @@
+{
+    "version": 8,
+    "name": "COG",
+    "center": [10.7522, 59.9139],
+    "zoom": 10,
+    "sources": {
+      "osm": {
+        "type": "raster",
+        "tiles": [
+          "https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
+        ],
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
+        "maxZoom": 20,
+        "tileSize": 256
+      },
+      "cog": {
+        "type": "raster",
+        "url": "cog://s2_land_cover.cog.tif"
+      }
+    },
+    "layers": [
+      {
+        "id": "background",
+        "type": "background",
+        "paint": {
+          "background-color": "#D4DCDC"
+        }
+      },
+      {
+        "id": "osm",
+        "type": "raster",
+        "source": "osm"
+      },
+      {
+        "id": "raster",
+        "type": "raster",
+        "source": "cog"
+      }
+    ]
+  }
+  
