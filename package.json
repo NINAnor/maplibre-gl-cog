@@ -19,9 +19,9 @@
   },
   "scripts": {
     "commit": "git-cz",
-    "build-iife": "esbuild src/index.ts --outfile=dist/index.js --target=es6 --global-name=pmtiles --bundle --format=iife",
-    "build-esm": "esbuild src/index.ts --outfile=dist/index.mjs --target=es6 --global-name=pmtiles --bundle --format=esm",
-    "build-cjs": "esbuild src/index.ts --outfile=dist/index.cjs --target=es6 --global-name=pmtiles --bundle --format=cjs",
+    "build-iife": "esbuild src/index.ts --outfile=dist/index.js --target=es6 --global-name=maplibreglCOG --bundle --format=iife",
+    "build-esm": "esbuild src/index.ts --outfile=dist/index.mjs --target=es6 --global-name=maplibreglCOG --bundle --format=esm",
+    "build-cjs": "esbuild src/index.ts --outfile=dist/index.cjs --target=es6 --global-name=maplibreglCOG --bundle --format=cjs",
     "build-tsc": "tsc --declaration --emitDeclarationOnly --outdir dist",
     "build": "npm run build-iife && npm run build-esm && npm run build-cjs && npm run build-tsc",
     "tsc": "tsc --noEmit --watch",
