@@ -1,5 +1,5 @@
 {
-  "name": "maplibre-gl-cog",
+  "name": "@ninanor/maplibre-gl-cog",
   "version": "0.0.0",
   "description": "Maplibre protocol to handle cloud optimized geotiff",
   "author": "niccolo.cantu@nina.no",
