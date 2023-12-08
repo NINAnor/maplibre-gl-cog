@@ -1,6 +1,6 @@
 {
   "name": "@ninanor/maplibre-gl-cog",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Maplibre protocol to handle cloud optimized geotiff",
   "author": "niccolo.cantu@nina.no",
   "license": "MIT",
