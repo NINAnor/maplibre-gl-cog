@@ -28,7 +28,6 @@
     "prettier": "prettier --write src/*.ts",
     "prettier-check": "prettier --check src/*.ts",
     "prepare": "npm run build && (is-ci || npx husky install)",
-    "postinstall": "is-ci || npx husky install",
     "release": "standard-version",
     "postrelease": "git push --follow-tags"
   },
