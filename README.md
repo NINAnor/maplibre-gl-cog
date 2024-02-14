@@ -1,6 +1,6 @@
 # Maplibre-gl-cog
 
-**ARCHIVED**: use (titiler)[https://developmentseed.org/titiler/] instead
+**ARCHIVED**: use [titiler](https://developmentseed.org/titiler/) instead
 
 
 This library aims to provide maplibre support for Cloud Optimized GEOTiff
