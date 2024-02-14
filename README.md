@@ -1,5 +1,8 @@
 # Maplibre-gl-cog
 
+**ARCHIVED**: use (titiler)[https://developmentseed.org/titiler/] instead
+
+
 This library aims to provide maplibre support for Cloud Optimized GEOTiff
 
 **NOTES**: The library requires that the GEOTiff has 4 bands (RGBA) and the values of each band is the range 0-255
